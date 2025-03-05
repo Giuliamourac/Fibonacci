@@ -12,28 +12,40 @@ namespace ConsoleApp1
 
             int quantidade = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Fibonacci:");
-
             int um = 0;
 
             int dois = 1;
             
             int tres = 1;
 
-            Console.WriteLine( $"{um} \n{dois} \n{tres}" );
-
-            for (int i = 0; i <= quantidade; i++)
+            if (quantidade <= 0 )
             {
 
-                int temp = tres;
+                Console.WriteLine( "escreva um numero maior que zero" );
 
-                tres = dois + tres;
+            }
 
-                um = dois;
+            else
+            {
 
-                dois = temp;
+                Console.WriteLine("Fibonacci:");
 
-                Console.WriteLine(tres);
+                Console.WriteLine($"{um} \n{dois} \n{tres}");
+
+                for (int i = 1; i <= quantidade; i++)
+                {
+
+                    int temp = tres;
+
+                    tres = dois + tres;
+
+                    um = dois;
+
+                    dois = temp;
+
+                    Console.WriteLine(tres);
+
+                }
 
             }
 
